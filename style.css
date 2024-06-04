@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body, main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 4rem;
+}
+body{
+    width: 100%;
+    padding: 4rem 0;
+}
+main{
+    width: 80%;
+}
+h1{
+    font-size: 3rem;
+    
+    color: rgb(46, 46, 46);
+    letter-spacing: 3px;
+}
+form{
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 1rem;
+    background-color: rgb(182, 182, 182);
+}
+input{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: rgb(70, 70, 70);
+    border: 0;
+}
+.boton{
+    width: initial;
+    background-color: aquamarine;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+.matrix{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.matrix >div{
+    width: 31%;
+    height: 24vw;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.matrix >div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
