@@ -58,7 +58,6 @@ input{
 }
 .matrix{
     width: 100%;
-    background-color: var(--color02);
     display: flex;
     flex-direction: row;
     justify-content:space-between;
@@ -68,7 +67,7 @@ input{
 }
 .matrix >div{
     position: relative;
-    width: 33.2%;
+    width: 33%;
     height: 24vw;
     overflow: hidden;
     background-color: var(--color03);
@@ -87,5 +86,5 @@ input{
     text-decoration: none;
     font-size: 3rem;
     color: var(--color00);
-    text-shadow: 5px, 2px, 10px, var(--color01);
+    text-shadow: 1px 1px 10px var(--color01);
 }

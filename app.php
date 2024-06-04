@@ -34,7 +34,7 @@ if($_POST){
     $nombreArchivo = $archivo['name'];//cogemos el nombre del archivo
     $nombreArchivoDespiezado = explode(".", $nombreArchivo);//separamos el nombre de la extensión en un array
     $extensionArchivo = strtolower(end($nombreArchivoDespiezado));//pasamos a minúsculas y cogemos el último item (donde está la extensión)
-    $arrayExtensiones = array('webp', 'avif', 'jpg', 'gif', 'png', 'zip', 'txt', 'xls', 'doc'); //hacemos un array donde metemos las extensiones que queremos admitir
+    $arrayExtensiones = array('webp', 'avif', 'jpg', 'gif', 'png', 'zip', 'txt', 'xls', 'doc', 'pdf'); //hacemos un array donde metemos las extensiones que queremos admitir
     if (!in_array($extensionArchivo, $arrayExtensiones)) { //comprobamos si la extensión del archivo NO está dentro del array
         header('location:index.php?e=2');
         die;
@@ -46,7 +46,7 @@ if($_POST){
 
     /* SUBIMOS A LA BBDD*/
     $con=mysqli_connect("localhost","igor_dbo","Areafor@01","igor_db");
-    $sql="INSERT INTO `imagenes`(`id_imagen`, `archivo`) VALUES (NULL,'$archivoCodificado')";
+    $sql="INSERT INTO `imagenes`(`id_imagen`, `archivo`, `titulo`, `alt`) VALUES (NULL,'$archivoCodificado','$titulo','$alt')";
     $resultado=mysqli_query($con,$sql);
 
 }
