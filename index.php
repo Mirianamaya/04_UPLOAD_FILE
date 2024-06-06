@@ -28,7 +28,7 @@ ini_set('display_errors', 1);
             $archivosTemporales = glob('./temp/*'); //obtenemos todos los nombres de los ficheros
             foreach($archivosTemporales as $item){
                 if(is_file($item)){
-                    unlink($item); //Eliminamos el archivo
+                    unlink($item); //Eliminamos el archivo 
                 }
                 
             }
